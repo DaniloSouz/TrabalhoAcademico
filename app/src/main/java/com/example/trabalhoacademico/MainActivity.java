@@ -25,10 +25,14 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase myDB = openOrCreateDatabase("login.db", MODE_PRIVATE, null);
         myDB.execSQL("CREATE TABLE IF NOT EXISTS usuario (login VARCHAR(20), senha VARCHAR(20))");
         ContentValues registro = new ContentValues();
+        ContentValues registro1 = new ContentValues();
         registro.put("login", "admin");
+        registro.put("senha", "12345678");
+        registro.put("login", "admin1");
         registro.put("senha", "12345678");
 
         myDB.insert("usuario", null, registro);
+        myDB.insert("usuario", null, registro1);
 
         myDB.close();
     }
@@ -50,7 +54,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "SQL OK", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, AlunoActivity.class);
             startActivity(intent);
-        }
+        }else if(loginString.equalsIgnoreCase(login) && senhaString.equalsIgnoreCase(senha)){
+            Toast.makeText(this, "SQL OK", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, ProfessorActivity.class);
+            startActivity(intent);}
         else
             Toast.makeText(this, "SQL Error", Toast.LENGTH_LONG).show();
 

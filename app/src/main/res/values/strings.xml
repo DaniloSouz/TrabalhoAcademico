@@ -4,4 +4,6 @@
     <string name="senha">Senha</string>
     <string name="login">Login</string>
     <string name="sqlite">Entrar</string>
+    <string name="tela_professor">Tela Professor</string>
+    <string name="tela_aluno">Tela Aluno</string>
 </resources>
