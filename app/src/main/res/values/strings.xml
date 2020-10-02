@@ -3,4 +3,7 @@
     <string name="usuario">Usuario</string>
     <string name="senha">Senha</string>
     <string name="login">Login</string>
+    <string name="Shared">Shared</string>
+    <string name="sqlite">sqlite</string>
+    <string name="Arquivo">Arquivo</string>
 </resources>
